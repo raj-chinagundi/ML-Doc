@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <title>Registration</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark  fixed-top shift">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('hscore') }}">ML-Doc</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#plasmadonorsec">
+                            Donation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#helplinesec">Helpline</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+  <section class="register">
+
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <center>
+          <br><br><br>
+          <h1 class="Registerh">
+            Select All Symptoms That Apply to You!
+          </h1>
+        </center>
+      </div>
+      <div class="Registerh">
+        <center>
+          <h3>{{ msg }}</h3>
+        </center>
+      </div>
+      <br><br>
+      <div class="row formsec align-items-center ">
+
+        <div class="dumbass" height = '75%'>
+          <div class=" form2">
+            <!-- <form action="" method="POST" id='form1'> -->
+
+                <input class="form-check-input maincheck" type="checkbox" value="patches" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Patches
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="abdominal_pain" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Abdominal Pain
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="anxiety" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Anxiety
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="vomiting" id="flexCheckDefault" name="user"> 
+                <label class="form-check-label" for="flexCheckDefault">
+                    Vomiting
+                  </label>
+                  <br>
+                  <input class="form-check-input maincheck" type="checkbox" value="skin_rash" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Skin Rashes
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="blackheads" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Blackheads
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="high_fever" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    High Fever
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="blister" id="flexCheckDefault" name="user"> 
+                <label class="form-check-label" for="flexCheckDefault">
+                    Blister
+                  </label>
+                  <br>
+                  <input class="form-check-input maincheck" type="checkbox" value="acidity" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Acidity
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="abnormal_menstruation" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Abnormal Menstruation
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="breathlessness" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Breathlessness
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="dehydration" id="flexCheckDefault" name="user"> 
+                <label class="form-check-label" for="flexCheckDefault">
+                    Dehydration
+                  </label>
+                  <br>
+                  <input class="form-check-input maincheck" type="checkbox" value="depression" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Depression
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="fatigue" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Fatigue
+                  </label>
+                  <br>
+                <input class="form-check-input maincheck" type="checkbox" value="dizziness" id="flexCheckDefault" name="user">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Dizzyness
+                  </label>
+                  <br>
+                  <br>
+                <a href={{ url_for('userdisp') }}>
+                  <button  class="btn btn-outline-secondary" class="last-button" statesearchbtn"
+                  style="width: 25%;">Calculate</button></a>
+              <!-- <button type="submit" form="form1" class="btn btn-outline-secondary" class="last-button" statesearchbtn"
+              style="width: 25%;">Calculate</button> -->
+              <!-- </form> -->
+              </div>
+              
+          </div>
+
+
+   
+         
+
+        </div>
+      </div>
+    </div>
+    <br><br><br><br>
+
+  </section>
+
+  
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
